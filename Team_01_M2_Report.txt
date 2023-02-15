@@ -1,0 +1,162 @@
+﻿Algorithm Visualizer
+Edrisa Jobe, Emir Sahin, Marc McAdoo, Mark Bahor
+Sponsored by Qi Wang, Dept. of Computer Science, UAlbany
+February 4, 2023
+
+
+1 Introduction 
+The algorithm visualizer is a GUI desktop application for improving students' understanding of sorting and searching algorithms. It provides a visual representation of the algorithm’s step-by-step process, allowing students to compare and evaluate different algorithms in an easy-to-grasp way. 
+
+
+The visualizer also helps students identify inefficiencies in their programs and further optimize them with more appropriate algorithms by comparing their runtime complexity. Overall, a sorting visualizer is a helpful tool for anyone looking to gain a better understanding of sorting algorithms.
+
+
+2 Description
+ 2.1 Why is this an important problem?
+A GUI for a sorting visualizer is important because it provides a more accessible and intuitive way for users to understand and analyze the sorting algorithms. Users can easily observe the step-by-step process of sorting, the changes in the data set, and the performance of each algorithm. Also, the GUI allows for a more interactive experience, allowing users to compare different algorithms, adjust the data set, and pause or step through the sorting process.
+
+
+2.2 How is this a challenging problem? 
+The sorting visualizer must be able to display the data in a clear and organized manner, while also allowing the user to interact with the data in real-time. This requires a significant amount of computations and resources to perform any time of sorting function. We also need to maintain the graphical display of everything being shown which is another challenge in itself. Additionally, the visualizer must be able to handle different operations and types of data, including bother numbers and categorical data while also being formatted correctly for each time of data. These are some of the more pressing issues when it comes to it.
+
+
+2.3 What are existing solutions?
+Some existing issues pertain to online visualizers that use animations and graphics to show how the algorithms are being sorted within an array of numbers or elements. Most of these visualizers provide a step-by-step process in which a UI is given for the user to input the data they’re trying to display. The graph then outputs the corresponding data in a neat format displaying how the algorithm works. Another solution would be software tools, these tools like the one we plan on implementing allows for us to visualize the algorithms in real-time and with a more modern aesthetic compared to the web based styles.
+
+
+2.4 What new things are we doing?
+This tool, unlike many of its other counterparts, will be completely free and easy to use, anyone will be able to understand the software without the hassle of finding it completely difficult to understand. We will be adding features that give the user a way to speed up the speed of each algorithm or slow it down to get a better understanding as to what’s actually going on. Another thing we plan on doing is having a variety of different algorithms for the user to sort through, instead of one algorithm to demonstrate we’ll have a variety of different algorithms for the user to choose from and understand.
+
+
+3 User Class and Functional Requirements
+3.1 User Class: The users of our program consist of students and educators. The use case for both classes however is the same.
+
+
+3.2 Algorithms to Visualize: The users will be able to simulate the following search and sorting algorithms with options to pause, step forward, and resume the visualization:
+Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Counting Sort, Bucket Soring, Heapsort, Tree Sort, Binary Search, linear search.
+
+
+3.3 Algorithm Comparison: The users will be able to compare the run times of various algorithms in terms of time complexity.
+
+
+3.4 User Input: The users should be able to generate a list of objects to test the various algorithms on. 
+
+
+3.5 Pseudocode: The users should be able to view the pseudocode of the algorithm being visualized.
+
+
+3.6 Language Support: The users should be able to switch to a (human) language of their choice.
+
+
+
+
+
+
+4 Non-Functional Requirements
+4.1 Availability: The information should be available to students regardless of their language background. So there needs to be a function to allow the user to use their native language. 
+4.2 Easy of Use: There's no “new” information that's being supplied by the application. So making the information organized and the UI easy to navigate will incentivise users to stick to the GUI as opposed to surfing the web and scanning multiple tabs. 
+
+
+Readability:
+* Displays easy to understand graphics on how algorithms work​
+Portability: 
+* Availability on Windows linux and mac OS
+
+
+* Display of number of steps taken during the sorting process.​
+* Display of time taken to sort the data set.​
+* Ability to change the speed of the sorting visualization.​
+* Ability to pause and resume the sorting visualization.​
+* Ability to step through the sorting process one step at a time.​
+* Option to repeat the sorting visualization with the same data set and algorithm.
+* Ability to Compare algorithms in terms of runtime​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5 Operating Requirements
+The visualizer will make use of JavaFX, a modern Java GUI library, to create a visually appealing and cross-platform native user interface. Consequently, the programming language used for development will be Java. The application will be compatible with Windows, Mac, and Linux operating systems, providing flexibility for students to access the application from a wide range of devices. The development of the application will be carried out using IntelliJ, an integrated development environment that will greatly enhance the efficiency and productivity of the team when working with JavaFX and testing the application.
+
+
+6 Design and Implementation Constraints 
+Cross-platform Code: All components of the application must be designed to run seamlessly on all major operating systems.
+
+
+Simple and modern interface: The user interface of the application should be simple and modern to encourage student use.
+
+
+Optimization: The application must be optimized to be fast and responsive, making use of best practices and optimized code.
+
+
+Documentation: Proper documentation of the code is necessary to make future additions and modifications easier.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+[1] “Algorithms.” GeeksforGeeks, 11 Oct. 2012, https://www.geeksforgeeks.org/fundamentals-of-algorithms/. Accessed 4 Feb. 2023. 
+[2] Java Algorithms. https://www.programiz.com/java-programming/algorithms. Accessed 4 Feb. 2023. 
+[3] Sort Visualizer. https://www.sortvisualizer.com/. Accessed 4 Feb. 2023. 
+[4] “JavaFX.” OpenJFX, https://openjfx.io/. Accessed 4 Feb. 2023.
