@@ -1,4 +1,4 @@
-﻿Algorithm Visualizer
+Algorithm Visualizer
 Edrisa Jobe, Emir Sahin, Marc McAdoo, Mark Bahor
 Sponsored by Qi Wang, Dept. of Computer Science, UAlbany
 February 4, 2023
@@ -13,39 +13,60 @@ The visualizer also helps students identify inefficiencies in their programs and
 
 2 Description
  2.1 Why is this an important problem?
-A GUI for a sorting visualizer is important because it provides a more accessible and intuitive way for users to understand and analyze the sorting algorithms. Users can easily observe the step-by-step process of sorting, the changes in the data set, and the performance of each algorithm. Also, the GUI allows for a more interactive experience, allowing users to compare different algorithms, adjust the data set, and pause or step through the sorting process.
+A GUI for a sorting visualizer is important because it provides a more accessible and intuitive way for users to understand and analyze the sorting algorithms. Users can easily observe the step-by-step process of sorting, the changes in the data set, and the performance of each algorithm. Also, the GUI allows for a more interactive experience, allowing users to compare different algorithms, and pause or step through the sorting process.
 
 
 2.2 How is this a challenging problem? 
-The sorting visualizer must be able to display the data in a clear and organized manner, while also allowing the user to interact with the data in real-time. This requires a significant amount of computations and resources to perform any time of sorting function. We also need to maintain the graphical display of everything being shown which is another challenge in itself. Additionally, the visualizer must be able to handle different operations and types of data, including bother numbers and categorical data while also being formatted correctly for each time of data. These are some of the more pressing issues when it comes to it.
+The sorting visualizer must be able to display the data in a clear and organized manner, while also allowing the user to interact with the window in real-time. This requires a significant amount of computations and resources to perform any time of sorting function. We also need to maintain the graphical display of everything being shown which is another challenge in itself. Additionally, the visualizer must be able to handle different operations and types of data, including both numbers and categorical data while also being formatted correctly for each time of data. Building the scenes in a way which will allow for easy modification as well as being simple will be a challenge. But we also want the GUI to look and feel professional, if the first impression of the application is that the GUI is poorly made then we have already lost credibility. 
 
 
 2.3 What are existing solutions?
-Some existing issues pertain to online visualizers that use animations and graphics to show how the algorithms are being sorted within an array of numbers or elements. Most of these visualizers provide a step-by-step process in which a UI is given for the user to input the data they’re trying to display. The graph then outputs the corresponding data in a neat format displaying how the algorithm works. Another solution would be software tools, these tools like the one we plan on implementing allows for us to visualize the algorithms in real-time and with a more modern aesthetic compared to the web based styles.
+
+
+Solution
+	Key Aspects
+	Strengths
+	Weaknesses
+	Youtube videos
+	Accessible and a variety of content
+	Simple
+	Not guaranteed to give you the correct or relevant information. No runtime analysis
+	Web UI (visualgo)
+	Variety of algorithms with step by step breakdowns
+	Clearly shows steps and sudo code execution
+	Not exactly intuitive to use(tutorial is multiple steps for each algorithm). No runtime analysis
+	Web UI (algorithm-visualizer)
+	Real code executions and visualization
+	You can look at the real code would look like and how it works
+	Not all the visualizations are easy to follow. No runtime analysis
+	
+
 
 
 2.4 What new things are we doing?
-This tool, unlike many of its other counterparts, will be completely free and easy to use, anyone will be able to understand the software without the hassle of finding it completely difficult to understand. We will be adding features that give the user a way to speed up the speed of each algorithm or slow it down to get a better understanding as to what’s actually going on. Another thing we plan on doing is having a variety of different algorithms for the user to sort through, instead of one algorithm to demonstrate we’ll have a variety of different algorithms for the user to choose from and understand.
+One thing missing from existing solutions is the runtime of the algorithms. We feel that providing comparisons for runtime will help make the abstract concept of runtime a little bit more intuitive.
+Also there are many ways to get the information you need, but that's only half the battle for students. What the extra step that needs to be taken is providing users with the ability to test their understanding. We believe that introducing a set of quiz questions for the users to test their understanding will keep users not only engaged but coming back to the application. 
 
 
 3 User Class and Functional Requirements
-3.1 User Class: The users of our program consist of students and educators. The use case for both classes however is the same.
+3.1 User Class: Student/Educator
+ The users of our program consist of students and educators. The use case for both classes however is the same.
 
 
-3.2 Algorithms to Visualize: The users will be able to simulate the following search and sorting algorithms with options to pause, step forward, and resume the visualization:
-Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Counting Sort, Bucket Soring, Heapsort, Tree Sort, Binary Search, linear search.
+3.2 Functional Requirements
+Algorithms to Visualize: 
+The users will be able to simulate the following search and sorting algorithms with options to pause, step forward, and resume the visualization:
+Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Counting Sort, Bucket Sorting, Heapsort, Tree Sort, Binary Search, linear search.
+This will be done by creating a different scene for each algorithm. When the scene opens there will be options to play, pause, step forward or backward. The exact display will depend on the algorithm. In this case most will be displayed in either a bar graph or tree graph.
 
 
-3.3 Algorithm Comparison: The users will be able to compare the run times of various algorithms in terms of time complexity.
+3.3 Algorithm Comparison: The users will be able to compare the run times of various algorithms in terms of time complexity. Each algorithm will have a different scene composed of a graph which displays all the relevant algorithms(searching or sorting). The algorithm of interest will be highlighted to show how it compares to the others. The other part of the scene will be composed of the sudo code with annotations explaining why this particular algorithm has this particular runtime.
 
 
-3.4 User Input: The users should be able to generate a list of objects to test the various algorithms on. 
+3.5 Pseudocode: To have the clearest understanding of what's going on there will be a pseudocode segment that the user can follow along with the visualization. It will highlight what step the code is at and what the values of the variables and return values are.
 
 
-3.5 Pseudocode: The users should be able to view the pseudocode of the algorithm being visualized.
-
-
-3.6 Language Support: The users should be able to switch to a (human) language of their choice.
+3.6 Testing understanding: Once the users feel like they understand what's going on they will have an option to take a short quiz. This will be composed of multiple choice questions with explanations of correct answers. This allows users to test their understanding of the material. Will also provide a sense of accomplishment or inform them they need to do some more studying.
 
 
 
@@ -53,47 +74,13 @@ Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Counting So
 
 
 4 Non-Functional Requirements
-4.1 Availability: The information should be available to students regardless of their language background. So there needs to be a function to allow the user to use their native language. 
-4.2 Easy of Use: There's no “new” information that's being supplied by the application. So making the information organized and the UI easy to navigate will incentivise users to stick to the GUI as opposed to surfing the web and scanning multiple tabs. 
+4.1Easy of Use: There's no “new” information that's being supplied by the application. So making the information organized and the UI easy to navigate will incentivise users to stick to the GUI as opposed to surfing the web and scanning multiple tabs. We also want to find the right balance of giving the users the right amount of information. If we overload users without too much information in one single scene they may feel intimidated. This is the reason we chose to use pseudocode as including programming syntax may be harder to follow for students. Our hope is that between the pseudocode and the visualizer the users will be armed with the knowledge to code a working example independently. 
 
 
-Readability:
-* Displays easy to understand graphics on how algorithms work​
-Portability: 
-* Availability on Windows linux and mac OS
-
-
-* Display of number of steps taken during the sorting process.​
-* Display of time taken to sort the data set.​
-* Ability to change the speed of the sorting visualization.​
-* Ability to pause and resume the sorting visualization.​
-* Ability to step through the sorting process one step at a time.​
-* Option to repeat the sorting visualization with the same data set and algorithm.
-* Ability to Compare algorithms in terms of runtime​
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+4.2 Scalable :
+Since we are creating the foundation for the application it's important we keep an organized structure to the program. There are many other aspects of computer science that can be introduced after we have a working application with a proper layout. Adding new buttons and scenes should be very simple and straightforward. 
+4.3 Portability:
+* Availability on Windows linux and mac OS.
 
 
 5 Operating Requirements
@@ -104,13 +91,14 @@ The visualizer will make use of JavaFX, a modern Java GUI library, to create a v
 Cross-platform Code: All components of the application must be designed to run seamlessly on all major operating systems.
 
 
-Simple and modern interface: The user interface of the application should be simple and modern to encourage student use.
+Simple and modern interface: The user interface of the application should be simple and modern to encourage student use. Javafx will allow us a significant amount of control of the layout and design. We want to make sure this product is exceptionally polished with a professional look and feel. As users navigate from one page to another we want to make sure the look and feel is consistent and the layout is intuitive. Even something as simple as resizing the window we want nodes of the scene to remain in their relevant position, this means using constraints on the nodes and window size itself.
+        
 
 
 Optimization: The application must be optimized to be fast and responsive, making use of best practices and optimized code.
 
 
-Documentation: Proper documentation of the code is necessary to make future additions and modifications easier.
+Documentation: Proper documentation of the code is necessary to make future additions and modifications easier. Also as more people use the app the more likely a small error will be found. We want it to be clear where the error is coming from and there are no “magic-number” values or variables with vague names. We also want to make sure that any functions we create are versatile and not-overly complex.
 
 
 
